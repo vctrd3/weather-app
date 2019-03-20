@@ -1,0 +1,46 @@
+body {
+  text-align: center;
+  padding: 10%;
+  background-color: #bfd8d5;
+  color: #738598;
+  font-family: 'Nunito', sans-serif;
+}
+
+i {
+  padding-bottom: 20px;
+  margin-right: 10px;
+}
+
+span {
+  font-size: 50px;
+  margin-bottom: 10px;
+  color: #738598;
+}
+
+h2, h4 {
+  margin-top: 15px;
+}
+
+.app {
+  margin: 0 auto;
+  background-color: #f4f3f3;
+  width: 40%;
+  padding: 15px 0 15px 0;
+}
+
+.display {
+  font-family: 'Nunito', sans-serif;
+}
+
+.fa-sun {
+  color: #fab95b;
+}
+
+.rounded {
+  border-width: 1px;
+  border-color: #dfdfdf;
+}
+
+#button {
+  margin-left: 10px;
+}
