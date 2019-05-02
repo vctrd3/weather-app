@@ -4,15 +4,18 @@ let get = document.querySelector('#button');
 
 get.addEventListener('click', displayWeather);
 
-document.addEventListener('keyup', function(e) {
+document.addEventListener('keyup', e => {
+  
+  
   if (e.keyCode === 13) {
     displayWeather();
+    
   }
 });
 
 function displayWeather() {
   const weather = new XMLHttpRequest();
-  let url = 'http://api.openweathermap.org/data/2.5/weather?q=' + city.value + '&APPID=0e25ca7b600cae8be4d83fffd5f5cef3'
+  const url = 'http://api.openweathermap.org/data/2.5/weather?q=' + city.value + '&APPID=0e25ca7b600cae8be4d83fffd5f5cef3'
   weather.open('GET', url, true);
   weather.onload = function() {
     if (this.status === 200 && this.readyState === 4) {
@@ -21,7 +24,7 @@ function displayWeather() {
 
       let icon = grabWeather.weather[0].icon;
       let desc = grabWeather.weather[0].description;
-      let temp = grabWeather.main.temp;
+      const temp = grabWeather.main.temp;
       let tempToFarenheit = ((temp - 273.15) * 1.8) + 32;
       weatherCity = document.querySelector('#weatherCity');
       weatherPic = document.querySelector('#weatherPic');
@@ -34,4 +37,7 @@ function displayWeather() {
     }
   }
   weather.send();
+  
+  city.value='';
 }
+
